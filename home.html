@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obofour Raphael - Home</title>
+    <meta name="description" content="Welcome to the official home page of musician Obofour Raphael. Explore his music, biography, videos, and more.">
+    <meta property="og:title" content="Obofour Raphael - Home">
+    <meta property="og:description" content="Welcome to the official home page of musician Obofour Raphael. Explore his music, biography, videos, and more.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:url" content="https://obo4raphael.com/home.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obofour Raphael - Home">
+    <meta name="twitter:description" content="Welcome to the official home page of musician Obofour Raphael. Explore his music, biography, videos, and more.">
+    <meta name="twitter:image" content="assets/images/hero.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="header-container">
+            <img src="OBO4LOGO.png" alt="Obofour Raphael Logo" class="logo">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link active">Home</a></li>
+                    <li><a href="biography.html" class="nav-link">Biography</a></li>
+                    <li><a href="videos.html" class="nav-link">Videos</a></li>
+                    <li><a href="discography.html" class="nav-link">Discography</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="merch.html" class="nav-link">Merch</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h2>Obofour Raphael</h2>
+                    <p>Silvanus Raphael Oduro Dickson, popularly known as Obofour Raphael, was born on April 10th in Brescia, in the Lombardy region of Italy. Although born abroad, he was raised in Dansoman, Accra, Ghana, where his passion for music was nurtured alongside his educational journey.</p>
+                    <a href="biography.html" class="read-more">Read More</a>
+                </div>
+                <div class="hero-image">
+                    <img src="OBO42.jpg" alt="Obofour Raphael performing" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Side-by-Side Release Sections -->
+        <div class="releases-container">
+            <!-- Left Section: New Album Out Soon -->
+            <section class="new-release">
+                <h2 class="upcoming-album">New Album Out Soon</h2>
+                <div class="release-container">
+                    <div class="release-card">
+                        <div class="cd-container">
+                            <div class="cd">
+                                <img src="AdomAkyedee.JPG" alt="Adom Akyedee Album Cover" class="cd-cover">
+                                <div class="cd-inner"></div>
+                            </div>
+                        </div>
+                        <div class="player-container">
+                            <h3>Adom Akyedee</h3>
+                            <div class="purchase-buttons">
+                                <a href="https://www.paypal.com/ncp/payment/8B54CYT3A5R6L" target="_blank" rel="noopener noreferrer" class="paypal-btn">Buy on PayPal</a>
+                                <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir" target="_blank" rel="noopener noreferrer" class="paystack-btn">Buy on PayStack</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section: New Release Out Now (Duplicated) -->
+            <section class="new-release">
+                <h2>Listen to Yesu Here</h2>
+                <div class="release-container">
+                    <div class="release-card">
+                        <div class="cd-container">
+                            <div class="cd">
+                                <img src="yesu.jpg" alt="Yesu Album Cover" class="cd-cover">
+                                <div class="cd-inner"></div>
+                            </div>
+                        </div>
+                        <div class="player-container">
+                            <h3>Yesu</h3>
+                            <audio id="yesu-player" controls>
+                                <source src="yesu.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Featured Card Section -->
+        <section class="featured-card-section">
+            <div class="featured-card">
+                <div class="card-content">
+                    <h3>🎵 Experience the Music</h3>
+                    <p>Discover Obofour Raphael's unique sound that blends traditional Ghanaian rhythms with contemporary beats. Each track tells a story of faith, resilience, and cultural pride.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Tracks</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Faith</span>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="discography.html" class="card-button">Explore Discography</a>
+                        <button class="card-button media-player-btn" id="media-player-btn">
+                            <span class="play-icon">▶</span>
+                            <span class="button-text">Play Music</span>
+                        </button>
+                    </div>
+                    <div class="custom-player" id="custom-player" style="display: none;">
+                        <div class="player-controls">
+                            <button class="player-btn" id="prev-btn">⏮</button>
+                            <button class="player-btn" id="play-pause-btn">▶</button>
+                            <button class="player-btn" id="next-btn">⏭</button>
+                        </div>
+                        <div class="player-info">
+                            <div class="current-track" id="current-track">Yesu</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+                        <audio id="featured-player" preload="none">
+                            <source src="yesu.mp3" type="audio/mpeg">
+                            <source src="obaa.mp3" type="audio/mpeg">
+                            <source src="efienipa.mp3" type="audio/mpeg">
+                            <source src="wosowoho.wav" type="audio/wav">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Merchandise Showcase Section -->
+        <section class="merchandise-showcase">
+            <div class="merchandise-container">
+                <h2>🎵 Official Merchandise</h2>
+                <p class="merch-description">Show your support for Obofour Raphael with our exclusive collection of premium merchandise. Each piece features unique designs inspired by his music and message of faith.</p>
+
+                <div class="merch-grid">
+                    <div class="merch-item">
+                        <img src="blackyesuhoodie.jpg" alt="Black Yesu Hoodie" loading="lazy">
+                        <h4>Black Yesu Hoodie</h4>
+                        <p>Premium hoodie with iconic design</p>
+                        <span class="merch-price">₵120</span>
+                    </div>
+
+                    <div class="merch-item">
+                        <img src="blackyesumerch.jpg" alt="Black Yesu T-Shirt" loading="lazy">
+                        <h4>Black Yesu T-Shirt</h4>
+                        <p>Comfortable cotton t-shirt</p>
+                        <span class="merch-price">₵120</span>
+                    </div>
+
+                    <div class="merch-item">
+                        <img src="redyesumerch.jpg" alt="Red Yesu T-Shirt" loading="lazy">
+                        <h4>Red Yesu T-Shirt</h4>
+                        <p>Bold red design</p>
+                        <span class="merch-price">₵120</span>
+                    </div>
+                </div>
+
+                <div class="merch-cta">
+                    <a href="merch.html" class="merch-cta-button">Shop All Merchandise</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Showcase Section -->
+        <section class="news-showcase">
+            <div class="news-showcase-container">
+                <h2>📰 Latest News</h2>
+                <div class="featured-news">
+                    <a href="news.html" class="news-link">
+                        <div class="news-hero">
+                            <img src="OBO42.jpg" alt="Obofour Raphael News" loading="lazy">
+                            <div class="news-overlay">
+                                <div class="news-badge">Breaking News</div>
+                                <h3>Obofour Raphael Secures Clearance from Craig David for New Single 'Yesu'</h3>
+                                <p>Exciting news in the music industry! Ghanaian gospel artist Obofour Raphael has successfully secured clearance from UK superstar Craig David to sample elements from his hit tracks for the upcoming single "Yesu".</p>
+                                <div class="news-meta">
+                                    <time datetime="2025-09-08">September 8, 2025</time>
+                                    <span class="read-more-text">Read Full Story →</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Card Section -->
+        <section class="connect-section">
+            <div class="connect-card">
+                <div class="connect-content">
+                    <img src="OBO4LOGO.png" alt="Obofour Raphael Logo" class="connect-logo">
+                    <h3>Connect with Obofour Raphael</h3>
+                    <p>Get in touch, book shows, or just say hello</p>
+                    <a href="contact.html" class="connect-button">Contact Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Obofour Raphael. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/kwahuboy?mibextid=wwXIfr&rdid=K2cBQ1CeEdZgjaih&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FCR3Tcsja%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+                    <img src="assets/icons/facebook-official.svg" alt="Facebook">
+                </a>
+                <a href="https://x.com/therealobofour?s=11" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="footer-social-link">
+                    <img src="assets/icons/x-official.svg" alt="X (Twitter)">
+                </a>
+                <a href="https://www.instagram.com/therealobofour/?igsh=MTVrY2Jsd2N4MjcwZg%3D%3D#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
+                    <img src="assets/icons/instagram-official.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@officialobofourtv?si=z6k0I4u1x_zRiwC-" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
+                    <img src="assets/icons/youtube-official.svg" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com/@obo4raphael?_t=ZN-8yJjKz6wWsI&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="footer-social-link">
+                    <img src="assets/icons/tiktok-official.svg" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
