@@ -70,109 +70,10 @@
                                 <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir" target="_blank" rel="noopener noreferrer" class="paystack-btn">Buy on PayStack</a>
                             </div>
 
-                            <!-- Album Preview Player -->
-                            <p style="color: var(--accent); font-size: 1.1rem; font-weight: 600; text-align: center; margin-top: var(--spacing-md);">Try the pre-version here</p>
-                            <div class="custom-player" style="margin-top: var(--spacing-lg);">
-                                <div class="player-controls">
-                                    <button class="player-btn" id="adom-prev-btn">⏮</button>
-                                    <button class="player-btn" id="adom-play-pause-btn">▶</button>
-                                    <button class="player-btn" id="adom-next-btn">⏭</button>
-                                </div>
-                                <div class="player-info">
-                                    <p id="adom-current-track" class="current-track">Select a track to preview</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="adom-progress-fill"></div>
-                                    </div>
-                                </div>
-                                <audio id="adom-player" preload="metadata"></audio>
-                            </div>
-
-                            <!-- Album Preview Player -->
-                            <p style="color: var(--accent); font-size: 1.1rem; font-weight: 600; text-align: center; margin-top: var(--spacing-md);">Try the pre-version here</p>
-                            <div class="custom-player" style="margin-top: var(--spacing-lg);">
-                                <div class="player-controls">
-                                    <button class="player-btn" id="home-prev-btn">⏮</button>
-                                    <button class="player-btn" id="home-play-pause-btn">▶</button>
-                                    <button class="player-btn" id="home-next-btn">⏭</button>
-                                </div>
-                                <div class="player-info">
-                                    <p id="home-current-track" class="current-track">Select a track to preview</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="home-progress-fill"></div>
-                                    </div>
-                                </div>
-                                <audio id="home-album-player" preload="metadata"></audio>
-                            </div>
-
-                            <!-- Album Preview Player -->
-                            <p style="color: var(--accent); font-size: 1.1rem; font-weight: 600; text-align: center; margin-top: var(--spacing-md);">Try the pre-version here</p>
-                            <div class="custom-player" style="margin-top: var(--spacing-lg);">
-                                <div class="player-controls">
-                                    <button class="player-btn" id="home-prev-btn">⏮</button>
-                                    <button class="player-btn" id="home-play-pause-btn">▶</button>
-                                    <button class="player-btn" id="home-next-btn">⏭</button>
-                                </div>
-                                <div class="player-info">
-                                    <p id="home-current-track" class="current-track">Select a track to preview</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="home-progress-fill"></div>
-                                    </div>
-                                </div>
-                                <audio id="home-album-player" preload="metadata"></audio>
-                            </div>
-
-                            <!-- Album Preview Player -->
-                            <p style="color: var(--accent); font-size: 1.1rem; font-weight: 600; text-align: center; margin-top: var(--spacing-md);">Try the pre-version here</p>
-                            <div class="custom-player" style="margin-top: var(--spacing-lg);">
-                                <div class="player-controls">
-                                    <button class="player-btn" id="album-prev-btn">⏮</button>
-                                    <button class="player-btn" id="album-play-pause-btn">▶</button>
-                                    <button class="player-btn" id="album-next-btn">⏭</button>
-                                </div>
-                                <div class="player-info">
-                                    <p id="album-current-track" class="current-track">Select a track to preview</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="album-progress-fill"></div>
-                                    </div>
-                                </div>
-                                <audio id="album-player" preload="metadata"></audio>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <script>
-                    // Adom Akyedee Album Preview Player on Home
-                    const adomTracks = [
-                        { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
-                        { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
-                        { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
-                        { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
-                        { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" },
-                        { title: "06. Tete Wo Ba Yie (ft. KK Kabobo)", src: "assets/audio/06. Tete Wo Ba Yie (ft. KK Kabobo)-[AudioTrimmer.com].mp3" },
-                        { title: "07. Ahoofe (Jazz)", src: "assets/audio/07. Ahoofe (Jazz)-[AudioTrimmer.com].mp3" },
-                        { title: "08. Ebibiman (ft. Sadat X & Nana Ama)", src: "assets/audio/08. Ebibiman (ft. Sadat X & Nana Ama)-[AudioTrimmer.com].mp3" },
-                        { title: "09. Afutuo (ft. Swazy B)", src: "assets/audio/09. Afutuo (ft. Swazy B)-[AudioTrimmer.com].mp3" },
-                        { title: "10. Ohia Ye Adambo", src: "assets/audio/10. Ohia Ye Adambo-[AudioTrimmer.com].mp3" },
-                        { title: "11. Emmanuel", src: "assets/audio/11. Emmanuel-[AudioTrimmer.com].mp3" },
-                        { title: "12. Miss Pearl (Skit)", src: "assets/audio/12. Miss Pearl (Skit)-[AudioTrimmer.com].mp3" },
-                        { title: "13. Efie Nipa", src: "assets/audio/13. Efie Nipa-[AudioTrimmer.com].mp3" },
-                        { title: "14. Breakfast", src: "assets/audio/14. Breakfast-[AudioTrimmer.com].mp3" },
-                        { title: "15. Asew P45 (ft. George Jahraa)", src: "assets/audio/15. Asew P45 (ft. George Jahraa)-[AudioTrimmer.com].mp3" },
-                        { title: "16. Abena Konadu", src: "assets/audio/16. Abena Konadu-[AudioTrimmer.com].mp3" },
-                        { title: "17. Yesu (ft. Morris Babyface)", src: "assets/audio/17. Yesu (ft. Morris Babyface)-[AudioTrimmer.com].mp3" },
-                        { title: "18. Outro", src: "assets/audio/18. Outro-[AudioTrimmer.com].mp3" }
-                    ];
-
-                    const adomPlayer = document.getElementById('adom-player');
-                    const adomCurrentTrackEl = document.getElementById('adom-current-track');
-                    const adomPlayPauseBtn = document.getElementById('adom-play-pause-btn');
-                    const adomPrevBtn = document.getElementById('adom-prev-btn');
-                    const adomNextBtn = document.getElementById('adom-next-btn');
-                    const adomProgressFill = document.getElementById('adom-progress-fill');
-
-                    let adomCurrentIndex = 0;
-                    let adomIsPlaying = false;
 
                     function loadAdomTrack(index) {
                         adomCurrentIndex = index;
@@ -218,38 +119,7 @@
                     loadAdomTrack(0);
                 </script>
 
-                <script>
-                    // Adom Akyedee Album Preview Player on Home
-                    const homeTracks = [
-                        { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
-                        { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
-                        { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
-                        { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
-                        { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" },
-                        { title: "06. Tete Wo Ba Yie (ft. KK Kabobo)", src: "assets/audio/06. Tete Wo Ba Yie (ft. KK Kabobo)-[AudioTrimmer.com].mp3" },
-                        { title: "07. Ahoofe (Jazz)", src: "assets/audio/07. Ahoofe (Jazz)-[AudioTrimmer.com].mp3" },
-                        { title: "08. Ebibiman (ft. Sadat X & Nana Ama)", src: "assets/audio/08. Ebibiman (ft. Sadat X & Nana Ama)-[AudioTrimmer.com].mp3" },
-                        { title: "09. Afutuo (ft. Swazy B)", src: "assets/audio/09. Afutuo (ft. Swazy B)-[AudioTrimmer.com].mp3" },
-                        { title: "10. Ohia Ye Adambo", src: "assets/audio/10. Ohia Ye Adambo-[AudioTrimmer.com].mp3" },
-                        { title: "11. Emmanuel", src: "assets/audio/11. Emmanuel-[AudioTrimmer.com].mp3" },
-                        { title: "12. Miss Pearl (Skit)", src: "assets/audio/12. Miss Pearl (Skit)-[AudioTrimmer.com].mp3" },
-                        { title: "13. Efie Nipa", src: "assets/audio/13. Efie Nipa-[AudioTrimmer.com].mp3" },
-                        { title: "14. Breakfast", src: "assets/audio/14. Breakfast-[AudioTrimmer.com].mp3" },
-                        { title: "15. Asew P45 (ft. George Jahraa)", src: "assets/audio/15. Asew P45 (ft. George Jahraa)-[AudioTrimmer.com].mp3" },
-                        { title: "16. Abena Konadu", src: "assets/audio/16. Abena Konadu-[AudioTrimmer.com].mp3" },
-                        { title: "17. Yesu (ft. Morris Babyface)", src: "assets/audio/17. Yesu (ft. Morris Babyface)-[AudioTrimmer.com].mp3" },
-                        { title: "18. Outro", src: "assets/audio/18. Outro-[AudioTrimmer.com].mp3" }
-                    ];
-
-                    const homePlayer = document.getElementById('home-album-player');
-                    const homeCurrentTrackEl = document.getElementById('home-current-track');
-                    const homePlayPauseBtn = document.getElementById('home-play-pause-btn');
-                    const homePrevBtn = document.getElementById('home-prev-btn');
-                    const homeNextBtn = document.getElementById('home-next-btn');
-                    const homeProgressFill = document.getElementById('home-progress-fill');
-
-                    let homeCurrentIndex = 0;
-                    let homeIsPlaying = false;
+                
 
                     function loadHomeTrack(index) {
                         homeCurrentIndex = index;
@@ -295,38 +165,7 @@
                     loadHomeTrack(0);
                 </script>
 
-                <script>
-                    // Adom Akyedee Album Preview Player on Home
-                    const homeTracks = [
-                        { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
-                        { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
-                        { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
-                        { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
-                        { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" },
-                        { title: "06. Tete Wo Ba Yie (ft. KK Kabobo)", src: "assets/audio/06. Tete Wo Ba Yie (ft. KK Kabobo)-[AudioTrimmer.com].mp3" },
-                        { title: "07. Ahoofe (Jazz)", src: "assets/audio/07. Ahoofe (Jazz)-[AudioTrimmer.com].mp3" },
-                        { title: "08. Ebibiman (ft. Sadat X & Nana Ama)", src: "assets/audio/08. Ebibiman (ft. Sadat X & Nana Ama)-[AudioTrimmer.com].mp3" },
-                        { title: "09. Afutuo (ft. Swazy B)", src: "assets/audio/09. Afutuo (ft. Swazy B)-[AudioTrimmer.com].mp3" },
-                        { title: "10. Ohia Ye Adambo", src: "assets/audio/10. Ohia Ye Adambo-[AudioTrimmer.com].mp3" },
-                        { title: "11. Emmanuel", src: "assets/audio/11. Emmanuel-[AudioTrimmer.com].mp3" },
-                        { title: "12. Miss Pearl (Skit)", src: "assets/audio/12. Miss Pearl (Skit)-[AudioTrimmer.com].mp3" },
-                        { title: "13. Efie Nipa", src: "assets/audio/13. Efie Nipa-[AudioTrimmer.com].mp3" },
-                        { title: "14. Breakfast", src: "assets/audio/14. Breakfast-[AudioTrimmer.com].mp3" },
-                        { title: "15. Asew P45 (ft. George Jahraa)", src: "assets/audio/15. Asew P45 (ft. George Jahraa)-[AudioTrimmer.com].mp3" },
-                        { title: "16. Abena Konadu", src: "assets/audio/16. Abena Konadu-[AudioTrimmer.com].mp3" },
-                        { title: "17. Yesu (ft. Morris Babyface)", src: "assets/audio/17. Yesu (ft. Morris Babyface)-[AudioTrimmer.com].mp3" },
-                        { title: "18. Outro", src: "assets/audio/18. Outro-[AudioTrimmer.com].mp3" }
-                    ];
-
-                    const homePlayer = document.getElementById('home-album-player');
-                    const homeCurrentTrackEl = document.getElementById('home-current-track');
-                    const homePlayPauseBtn = document.getElementById('home-play-pause-btn');
-                    const homePrevBtn = document.getElementById('home-prev-btn');
-                    const homeNextBtn = document.getElementById('home-next-btn');
-                    const homeProgressFill = document.getElementById('home-progress-fill');
-
-                    let homeCurrentIndex = 0;
-                    let homeIsPlaying = false;
+              
 
                     function loadHomeTrack(index) {
                         homeCurrentIndex = index;
