@@ -98,9 +98,9 @@ header::before {
 }
 
 .logo {
-    height: 3000px;
-    width: 3000px;
-    object-fit: cover;
+    height: 120px;
+    width: auto;
+    max-width: 400px;
     filter: brightness(1.2) contrast(1.1);
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
