@@ -98,8 +98,8 @@ header::before {
 }
 
 .logo {
-    height: 400px;
-    width: 950px;
+    height: 500px;
+    width: 1050px;
     object-fit: cover;
     filter: brightness(1.2) contrast(1.1);
     transition: all 0.3s ease;
