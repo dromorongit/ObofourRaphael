@@ -67,9 +67,105 @@
                             <a href="https://elasticstage.com/obo4raphael/releases/adom-akyedee-part-two-album" target="_blank" rel="noopener noreferrer" class="album-btn vinyl-btn">🎵 Get Vinyl Album Part Two</a>
                             <a href="AdomAkyedee-Album.zip" download="AdomAkyedee-Album.zip" class="album-btn download-btn">📥 Download Zipped Files</a>
                         </div>
+
+                        <!-- Album Preview Player -->
+                        <div class="custom-player" style="margin-top: var(--spacing-lg);">
+                            <div class="player-controls">
+                                <button class="player-btn" id="prev-btn">⏮</button>
+                                <button class="player-btn" id="play-pause-btn">▶</button>
+                                <button class="player-btn" id="next-btn">⏭</button>
+                            </div>
+                            <div class="player-info">
+                                <p id="current-track" class="current-track">Select a track to preview</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progress-fill"></div>
+                                </div>
+                            </div>
+                            <audio id="album-player" preload="metadata"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                // Adom Akyedee Album Preview Player
+                const tracks = [
+                    { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife_30s.mp3" },
+                    { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)_30s.mp3" },
+                    { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)_30s.mp3" },
+                    { title: "04. Obaa", src: "assets/audio/04. Obaa_30s.mp3" },
+                    { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom_30s.mp3" },
+                    { title: "06. Tete Wo Ba Yie (ft. KK Kabobo)", src: "assets/audio/06. Tete Wo Ba Yie (ft. KK Kabobo)_30s.mp3" },
+                    { title: "07. Ahoofe (Jazz)", src: "assets/audio/07. Ahoofe (Jazz)_30s.mp3" },
+                    { title: "08. Ebibiman (ft. Sadat X & Nana Ama)", src: "assets/audio/08. Ebibiman (ft. Sadat X & Nana Ama)_30s.mp3" },
+                    { title: "09. Afutuo (ft. Swazy B)", src: "assets/audio/09. Afutuo (ft. Swazy B)_30s.mp3" },
+                    { title: "10. Ohia Ye Adambo", src: "assets/audio/10. Ohia Ye Adambo_30s.mp3" },
+                    { title: "11. Emmanuel", src: "assets/audio/11. Emmanuel_30s.mp3" },
+                    { title: "12. Miss Pearl (Skit)", src: "assets/audio/12. Miss Pearl (Skit)_30s.mp3" },
+                    { title: "13. Efie Nipa", src: "assets/audio/13. Efie Nipa_30s.mp3" },
+                    { title: "14. Breakfast", src: "assets/audio/14. Breakfast_30s.mp3" },
+                    { title: "15. Asew P45 (ft. George Jahraa)", src: "assets/audio/15. Asew P45 (ft. George Jahraa)_30s.mp3" },
+                    { title: "16. Abena Konadu", src: "assets/audio/16. Abena Konadu_30s.mp3" },
+                    { title: "17. Yesu (ft. Morris Babyface)", src: "assets/audio/17. Yesu (ft. Morris Babyface)_30s.mp3" },
+                    { title: "18. Outro", src: "assets/audio/18. Outro_30s.mp3" }
+                ];
+
+                const player = document.getElementById('album-player');
+                const currentTrackEl = document.getElementById('current-track');
+                const playPauseBtn = document.getElementById('play-pause-btn');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const progressFill = document.getElementById('progress-fill');
+
+                let currentIndex = 0;
+                let isPlaying = false;
+
+                function loadTrack(index) {
+                    currentIndex = index;
+                    player.src = tracks[index].src;
+                    currentTrackEl.textContent = tracks[index].title;
+                    player.load();
+                }
+
+                function playPause() {
+                    if (isPlaying) {
+                        player.pause();
+                        playPauseBtn.textContent = '▶';
+                    } else {
+                        player.play();
+                        playPauseBtn.textContent = '⏸';
+                    }
+                    isPlaying = !isPlaying;
+                }
+
+                function nextTrack() {
+                    currentIndex = (currentIndex + 1) % tracks.length;
+                    loadTrack(currentIndex);
+                    if (isPlaying) player.play();
+                }
+
+                function prevTrack() {
+                    currentIndex = (currentIndex - 1 + tracks.length) % tracks.length;
+                    loadTrack(currentIndex);
+                    if (isPlaying) player.play();
+                }
+
+                player.addEventListener('ended', nextTrack);
+                player.addEventListener('timeupdate', () => {
+                    const percent = (player.currentTime / player.duration) * 100;
+                    progressFill.style.width = percent + '%';
+                });
+
+                playPauseBtn.addEventListener('click', playPause);
+                nextBtn.addEventListener('click', nextTrack);
+                prevBtn.addEventListener('click', prevTrack);
+
+                // Load first track
+                loadTrack(0);
+            </script>
+        </div>
+    </div>
+</div>
         
             <!-- EP Cards Container -->
             <div style="display: flex; gap: var(--spacing-xl); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-xl);">
