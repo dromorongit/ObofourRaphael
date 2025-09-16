@@ -1518,6 +1518,13 @@ main {
     transform: translateY(-2px);
 }
 
+.download-btn.blurred {
+    filter: blur(2px);
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 /* Track List */
 .tracklist-section {
     margin-top: var(--spacing-xl);

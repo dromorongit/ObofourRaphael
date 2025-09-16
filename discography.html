@@ -60,12 +60,12 @@
                         <p class="track-count">18 Tracks</p>
 
                         <div class="album-buttons">
-                            <a href="https://www.paypal.com/ncp/payment/8B54CYT3A5R6L" target="_blank" rel="noopener noreferrer" class="album-btn paypal-btn">🛒 Buy Album with PayPal</a>
-                            <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir" target="_blank" rel="noopener noreferrer" class="album-btn paystack-btn">💳 Buy Album with PayStack (Mobile Money)</a>
+                            <a href="https://www.paypal.com/ncp/payment/8B54CYT3A5R6L&return=https://obo4raphael.com/discography.html?payment=pending" target="_blank" rel="noopener noreferrer" class="album-btn paypal-btn">🛒 Buy Album with PayPal</a>
+                            <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir?success_url=https://obo4raphael.com/discography.html?payment=pending" target="_blank" rel="noopener noreferrer" class="album-btn paystack-btn">💳 Buy Album with PayStack (Mobile Money)</a>
                             <a href="https://forms.office.com/r/Gz0z7N0Kue" target="_blank" rel="noopener noreferrer" class="album-btn cd-btn">💿 Want Physical CD</a>
                             <a href="https://elasticstage.com/obo4raphael/releases/adom-akyedee-part-one-album" target="_blank" rel="noopener noreferrer" class="album-btn vinyl-btn">🎵 Get Vinyl Album Part One</a>
                             <a href="https://elasticstage.com/obo4raphael/releases/adom-akyedee-part-two-album" target="_blank" rel="noopener noreferrer" class="album-btn vinyl-btn">🎵 Get Vinyl Album Part Two</a>
-                            <a href="AdomAkyedee-Album.zip" download="AdomAkyedee-Album.zip" class="album-btn download-btn">📥 Download Zipped Files</a>
+                            <a href="AdomAkyedee-Album.zip" download="AdomAkyedee-Album.zip" class="album-btn download-btn blurred" id="download-btn">📥 Download Zipped Files</a>
                         </div>
 
                         <!-- Album Preview Player -->
@@ -164,6 +164,48 @@
                 // Load first track
                 loadTrack(0);
             </script>
+
+            <script>
+                // Payment and Download Unlock Functionality
+                document.addEventListener('DOMContentLoaded', function() {
+                    const downloadBtn = document.getElementById('download-btn');
+                    const modal = document.getElementById('payment-modal');
+                    const closeModal = document.getElementById('close-modal');
+                    const confirmBtn = document.getElementById('confirm-payment-btn');
+
+                    // Check if payment is already confirmed
+                    if (localStorage.getItem('paymentConfirmed') === 'true') {
+                        downloadBtn.classList.remove('blurred');
+                    }
+
+                    // Check URL parameters for payment status
+                    const urlParams = new URLSearchParams(window.location.search);
+                    if (urlParams.get('payment') === 'pending') {
+                        modal.style.display = 'block';
+                    }
+
+                    // Close modal
+                    closeModal.addEventListener('click', function() {
+                        modal.style.display = 'none';
+                    });
+
+                    // Confirm payment and unlock download
+                    confirmBtn.addEventListener('click', function() {
+                        localStorage.setItem('paymentConfirmed', 'true');
+                        downloadBtn.classList.remove('blurred');
+                        modal.style.display = 'none';
+                        // Clear URL parameter
+                        window.history.replaceState(null, null, window.location.pathname);
+                    });
+
+                    // Close modal when clicking outside
+                    window.addEventListener('click', function(event) {
+                        if (event.target === modal) {
+                            modal.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
         </div>
     </div>
 </div>
@@ -201,6 +243,16 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+   
+                <!-- Payment Confirmation Modal -->
+                <div id="payment-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" id="close-modal">&times;</span>
+                        <h2>Payment Successful!</h2>
+                        <p>Thank you for your payment. Click the button below to unlock your download.</p>
+                        <button id="confirm-payment-btn" class="album-btn">✅ Confirm Payment & Unlock Download</button>
                     </div>
                 </div>
         
